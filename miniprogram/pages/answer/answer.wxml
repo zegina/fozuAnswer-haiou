@@ -1,7 +1,5 @@
 <view class="container">
-    <view class="answer">
-        <text class="answer-text">{{answer}}</text>
-    </view>
+    <view class="answer">{{answer}}</view>
     <view class="button">
         <button bindtap="back">返回</button>
     </view>

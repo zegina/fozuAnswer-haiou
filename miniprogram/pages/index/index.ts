@@ -1,66 +1,56 @@
 // index.ts
-// 获取应用实例
-const app = getApp<IAppOption>()
-
 Page({
   data: {
-    // answer: '',
-    prompt: '求问佛祖，如何获得心灵上的宁静',
+    answer: "",
+    prompt: "求问佛祖，如何获得心灵上的宁静",
+    thinking: false,
   },
 
   ask() {
-    console.log('ask: ', this.data.prompt)
+    console.log("ask: ", this.data.prompt);
     this.setData({
-      answer: '佛祖正在思考...'
-    })
+      thinking: true,
+    });
     wx.request({
-      url: 'https://buddha.vihv.workers.dev',
-      method: 'POST',
+      url: "https://buddha.vihv.workers.dev",
+      method: "POST",
       header: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
       data: {
-        ask: this.data.prompt
+        ask: this.data.prompt,
       },
       success: (res) => {
-        console.log('success',res)
-        // this.setData({
-        //   answer: res.data as string
-        // })
-        wx.navigateTo({
-          url: '/pages/answer/answer?prompt=' + this.data.prompt,
-        })
+        console.log("success", res);
         //保存到本地
         wx.setStorage({
-          key: 'answer',
+          key: "answer",
           data: res.data,
-        })
+        });
+        this.setData({
+          thinking: false,
+        });
+        wx.navigateTo({
+          url: "/pages/answer/answer?prompt=" + this.data.prompt,
+        });
       },
       fail: (err) => {
-        console.error(err)
+        console.error(err);
         // 提示网络出现错误
         wx.showToast({
-          title: '网络出现错误，稍后再试',
-          icon: 'none'
-        })
-      }
-    })
-   
-
+          title: "网络出现错误，稍后再试",
+          icon: "none",
+        });
+        this.setData({
+          thinking: false,
+        });
+      },
+    });
   },
 
   changePrompt(e: any) {
     this.setData({
-      prompt: e.detail.value
-    })
+      prompt: e.detail.value,
+    });
   },
-  
-  onLoad() {
-    // @ts-ignore
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
-  },
-})
+});

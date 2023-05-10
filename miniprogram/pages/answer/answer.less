@@ -1,34 +1,39 @@
+/**index.wxss**/
+@main-color: #ffd700;
+@secondary-color: #8b4513;
+@bg-color: #0b0603;
+
+page {
+  font-family: "微软雅黑", Arial, sans-serif;
+  background-color: @bg-color;
+  margin: 0;
+  padding: 0;
+  color: @secondary-color;
+}
 
 .container {
-    width: 750rpx;
-    margin: 0 auto;
-    padding-top: 0px;
-    opacity: 0.8;
-}
-.answer {
-    width: 700rpx;
-    height: 1200rpx;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1rpx solid #8b4513;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: @bg-color;
 }
 
-.answer-text {
-    font-size: 18px;
-    line-height: 1.5;
-    color: rgb(28, 147, 201);
-    font-weight: 400;
+.answer {
+  width: 100%;
+  padding: 20rpx;
+  border: 4rpx solid @secondary-color;
+  border-radius: 20rpx;
 }
-.button {
-    border: none;
-    font-size: 18px;
-    border-radius: 50rpx;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    &:hover {
-        background-color: darken(rgb(28, 147, 201), 10%);
-    }
-    position: absolute;
-    top: 85%;
-    left: 28%;
+
+button {
+  margin-top: 40rpx;
+  background-color: @main-color;
+  color: @secondary-color;
+  border-radius: 20rpx;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: darken(@main-color, 10%);
+  }
 }
