@@ -1,0 +1,32 @@
+.container {
+  width: 750rpx;
+  margin: 0 auto;
+  padding-top: 0px;
+  opacity: 0.8;
+}
+.answer {
+  width: 700rpx;
+  height: 1200rpx;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1rpx solid #8b4513;
+}
+.answer-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1c93c9;
+  font-weight: 400;
+}
+.button {
+  border: none;
+  font-size: 18px;
+  border-radius: 50rpx;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 85%;
+  left: 28%;
+}
+.button:hover {
+  background-color: #16729c;
+}

@@ -1,0 +1,18 @@
+<!-- index.wxml -->
+<view class="container">
+  <image mode="widthFix" class="buddha-img" src="../../static/buddha.jpg"></image>
+  <view class="main">
+    <view class="box">
+      <view class="title">简单描述一下你内心疑惑</view>
+      <view class="qustion">
+        <textarea class="question-input" name="remark" placeholder="例如：求问佛祖，如何获得心灵上的宁静" auto-focus="true" bindinput="changePrompt" />
+      </view>
+      <view class="button">
+        <button bindtap="ask">请求佛祖解惑</button>
+      </view>
+      <view class="answer">
+        <text class="answer-text">{{answer}}</text>
+      </view>
+    </view>
+  </view>
+</view>

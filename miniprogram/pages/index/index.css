@@ -1,0 +1,84 @@
+/**index.wxss**/
+page {
+  font-family: "微软雅黑", Arial, sans-serif;
+  background-color: #0b0603;
+  margin: 0;
+  padding: 0;
+  color: #8b4513;
+}
+.container {
+  width: 750rpx;
+  margin: 0 auto;
+  padding-top: 0px;
+  opacity: 0.8;
+}
+.main {
+  position: absolute;
+  bottom: 0rpx;
+  width: 750rpx;
+  height: 60%;
+}
+.box {
+  width: 750rpx;
+  height: 80%;
+}
+.title {
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 200rpx;
+  opacity: 0.3;
+}
+.buddha-img {
+  width: 100%;
+}
+.question-input {
+  display: block;
+  width: 600rpx;
+  font-size: 32rpx;
+  padding: 10rpx;
+  border: 4rpx solid #8b4513;
+  border-radius: 14rpx;
+  outline: none;
+  margin-bottom: 20rpx;
+}
+.qustion {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+.qustion .question-input {
+  height: 200rpx;
+}
+.button {
+  background-color: #ffd700;
+  border: none;
+  font-size: 18px;
+  color: #8b4513;
+  border-radius: 40rpx;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 85%;
+  left: 28%;
+  opacity: 0.1;
+}
+.button:hover {
+  background-color: #ccac00;
+}
+.answer {
+  width: 650rpx;
+  height: 190rpx;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 60%;
+  left: 7%;
+  border: 2rpx solid #8b4513;
+}
+.answer-text {
+  font-size: 18px;
+  line-height: 1.5;
+}
