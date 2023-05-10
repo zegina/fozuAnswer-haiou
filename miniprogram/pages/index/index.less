@@ -1,5 +1,4 @@
 /**index.wxss**/
-
 @main-color: #ffd700;
 @secondary-color: #8b4513;
 @bg-color: #0b0603;
@@ -13,99 +12,36 @@ page {
 }
 
 .container {
-  width: 750rpx;
-  margin: 0 auto;
-  padding-top: 0px;
-  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: @bg-color;
 }
 
-.main {
-  position: absolute;
-  bottom: 0rpx;
-  width: 750rpx;
-  height: 60%;
-  // opacity: 0.5;
+.question-input {
+  width: 100%;
+  padding: 20rpx;
+  border: 4rpx solid @secondary-color;
+  border-radius: 20rpx;
 }
 
-.box {
-  width: 750rpx;
-  height: 80%;
-}
-
-.title {
-  font-size: 30rpx;
-  color: #fff;
-  // 水平居中
-  text-align: center;
-  margin-top: 200rpx;
-  opacity: 0.3;
+button {
+  margin-top: 40rpx;
+  background-color: @main-color;
+  color: @secondary-color;
+  border-radius: 20rpx;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: darken(@main-color, 10%);
+  }
 }
 
 .buddha-img {
   width: 100%;
 }
 
-.question-input {
-  display: block;
-  width: 600rpx;
-  font-size: 32rpx;
-  padding: 10rpx;
-  border: 4rpx solid @secondary-color;
-  border-radius: 14rpx;
-  // background-color: darken(@bg-color, 10%);
-  // color: @secondary-color;
-  outline: none;
-  margin-bottom: 20rpx;
-}
-.qustion {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-  
-}
-.qustion .question-input {
-  // width: 100%;
-  height: 200rpx; //设置高度为200rpx，可以根据需要调整
-}
-
-.button {
-  background-color: @main-color;
-  border: none;
-  font-size: 18px;
-  color: @secondary-color;
-  border-radius: 40rpx;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: darken(@main-color, 10%);
-  }
-  position: absolute;
-  top: 85%;
-  left: 28%;
-  // 透明度
-  opacity: 0.1;
-}
-
-.answer {
-  width: 650rpx;
-  height: 190rpx;
-  // margin-top: 20px;
-  // padding: 15px;
-  border-radius: 5px;
-  // background-color: @bg-color;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  // background-color: red;
-  position: absolute;
-  top: 60%;
-  left: 7%;
-  border: 2rpx solid #8b4513;
-  
-}
-
-.answer-text {
-  font-size: 18px;
-  line-height: 1.5;
+.thinking {
+  margin-top: 40rpx;
 }
